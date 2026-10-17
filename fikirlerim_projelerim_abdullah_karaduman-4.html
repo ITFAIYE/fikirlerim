@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#b5121b">
+<title>Fikirlerim & Projelerim | Abdullah KARADUMAN</title>
+<style>
+:root{--red:#b5121b;--red-dark:#7f0d14;--ink:#17202b;--muted:#687383;--paper:#f4f6f8;--card:#fff;--line:#e4e8ee}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--paper);color:var(--ink)}
+.hero{position:relative;overflow:hidden;color:white;background:linear-gradient(120deg,rgba(22,27,35,.96),rgba(127,13,20,.94)),radial-gradient(circle at 85% 10%,#ef4444,transparent 35%);padding:56px 22px 48px}
+.hero:after{content:"";position:absolute;width:360px;height:360px;border:42px solid rgba(255,255,255,.06);border-radius:50%;right:-100px;top:-170px}
+.wrap{width:min(1120px,100%);margin:auto;position:relative;z-index:1}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;font-size:12px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;color:#ffd6d8}
+.eyebrow:before{content:"";width:25px;height:3px;background:#ff6269;border-radius:4px}
+h1{font-size:clamp(34px,5vw,58px);line-height:1.04;letter-spacing:-1.8px;margin:18px 0 14px;max-width:780px}
+h1 span{color:#ff7379}.intro{font-size:17px;line-height:1.7;color:#e3e6eb;max-width:680px;margin:0}
+.hero-bottom{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-top:30px}
+.author{font-weight:750;font-size:14px}.author small{display:block;color:#c4c9d1;font-weight:500;margin-top:5px}
+.pill{border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:10px 14px;font-size:12px;color:#fff;background:rgba(255,255,255,.08)}
+main{padding:38px 22px 60px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:18px;flex-wrap:wrap;margin-bottom:22px}
+h2{font-size:27px;letter-spacing:-.6px;margin:0 0 7px}.sub{color:var(--muted);margin:0;line-height:1.5}
+.tools{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.search{width:min(300px,75vw);padding:12px 15px;border:1px solid var(--line);border-radius:12px;background:#fff;font-size:14px;outline:none}.search:focus{border-color:var(--red);box-shadow:0 0 0 3px #b5121b18}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.project{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 5px 20px rgba(20,30,45,.045);display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.project:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(20,30,45,.11)}
+.cover{height:185px;position:relative;overflow:hidden;background:#252c35}
+.cover img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}.project:hover .cover img{transform:scale(1.045)}
+.cover:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(12,17,24,.7),transparent 65%)}
+.tag{position:absolute;z-index:1;left:14px;top:14px;background:rgba(255,255,255,.93);color:var(--red-dark);font-size:11px;font-weight:800;padding:7px 10px;border-radius:999px}
+.cover-mark{position:absolute;z-index:1;bottom:13px;left:16px;color:#fff;font-size:12px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase}
+.content{padding:19px;display:flex;flex-direction:column;flex:1}.content h3{margin:0 0 9px;font-size:19px;letter-spacing:-.3px}.content p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.6;flex:1}
+.actions{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:20px}.status{font-size:11px;color:#6d7784}
+.open{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;color:white;background:var(--red);padding:11px 15px;border-radius:10px;font-size:13px;font-weight:750;transition:background .2s}.open:hover{background:var(--red-dark)}.arrow{font-size:17px;line-height:10px}
+.empty{display:none;padding:30px;border:1px dashed #cbd2dc;border-radius:15px;text-align:center;color:var(--muted);grid-column:1/-1}
+.note{margin-top:28px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px 22px;display:flex;gap:14px;align-items:flex-start}.note-icon{background:#fff0f1;color:var(--red);font-size:20px;padding:10px;border-radius:12px}.note strong{display:block;margin:2px 0 5px}.note p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}
+footer{background:#151a22;color:#c7cdd5;padding:23px 22px;text-align:center;font-size:12px;line-height:1.7}footer strong{color:white}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:600px){.hero{padding:42px 19px 36px}.grid{grid-template-columns:1fr}.cover{height:205px}main{padding:30px 16px 44px}.section-head{align-items:stretch}.tools{width:100%}.search{width:100%}.note{padding:16px}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Fikirden uygulamaya</div>
+    <h1>Fikirlerim <span>&</span><br>Projelerim</h1>
+    <p class="intro">Ankara İtfaiyesi için geliştirdiğim dijital çözümler, araç rehberleri ve eğitim projeleri. Amacım; bilgiye erişimi kolaylaştırmak, operasyonel güvenliği desteklemek ve mesleki gelişime katkı sağlamak.</p>
+    <div class="hero-bottom">
+      <div class="author">ABDULLAH KARADUMAN<small>Ankara İtfaiyesi için hazırlanan çalışmalar</small></div>
+      <div class="pill">🚒 Güvenlik · Eğitim · Teknoloji</div>
+    </div>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+    <div class="section-head">
+      <div><h2>Proje arşivi</h2><p class="sub">Bir projeyi incelemek için kart üzerindeki “Aç” butonuna basın.</p></div>
+      <div class="tools"><input class="search" id="search" type="search" placeholder="Projelerde ara..." aria-label="Projelerde ara"></div>
+    </div>
+    <div class="grid" id="projects">
+      <article class="project" data-search="araç takip bilgi sistemi atbs araç takip filo konum">
+        <div class="cover"><img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1000&q=85" alt="Araç ve takip sistemi"><span class="tag">ARAÇ TAKİP</span><span class="cover-mark">ATBS</span></div>
+        <div class="content"><h3>Araç Takip Bilgi Sistemi</h3><p>İtfaiye araçlarına ait takip ve bilgi süreçlerini tek bir dijital sistem üzerinden yönetmeyi amaçlayan çalışma.</p><div class="actions"><span class="status">Dijital sistem</span><a class="open" href="https://itfaiye.github.io/atbs" target="_blank" rel="noopener">Aç <span class="arrow">↗</span></a></div></div>
+      </article>
+      <article class="project" data-search="ankara itfaiyesi araç kılavuzları araç rehberi kullanım kılavuzu">
+        <div class="cover"><img src="https://images.unsplash.com/photo-1599708153386-62bf7f?auto=format&fit=crop&w=1000&q=85" alt="İtfaiye araç kılavuzları" onerror="this.style.display='none'"><span class="tag">ARAÇ REHBERİ</span><span class="cover-mark">ANKARA İTFAİYESİ</span></div>
+        <div class="content"><h3>İtfaiye Araç Kılavuzları</h3><p>İtfaiye araçlarına ait kullanım kılavuzlarını ve teknik bilgilere erişimi kolaylaştıran dijital rehber.</p><div class="actions"><span class="status">Dijital kılavuz</span><a class="open" href="https://itfaiye.github.io" target="_blank" rel="noopener">Aç <span class="arrow">↗</span></a></div></div>
+      </article>
+      <article class="project" data-search="yapay zeka ai asistan doküman soru cevap">
+        <div class="cover"><img src="yapay-zeka-asistani.jpg" alt="Ankara İtfaiyesi Yapay Zekâ Asistanı" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1000&q=85'"><span class="tag">YAPAY ZEKÂ</span><span class="cover-mark">AI ASİSTANI</span></div>
+        <div class="content"><h3>Yapay Zekâ Asistanı</h3><p>Teknik dokümanlar ve araç bilgileri üzerinden personelin ihtiyaç duyduğu bilgiye daha hızlı ulaşmasını destekleyen asistan.</p><div class="actions"><span class="status">Akıllı bilgi erişimi</span><a class="open" href="https://itfaiye.github.io/ITFAIYE-AI-ASISTAN/" target="_blank" rel="noopener">Aç <span class="arrow">↗</span></a></div></div>
+      </article>
+      <article class="project" data-search="günlük yoklama içtima personel giriş personel takip">
+        <div class="cover"><img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1000&q=85" alt="Personel ve ekip çalışması"><span class="tag">PERSONEL</span><span class="cover-mark">GÜNLÜK YOKLAMA</span></div>
+        <div class="content"><h3>Günlük Yoklama ve İçtima</h3><p>Günlük yoklama, içtima ve personel giriş işlemlerinin dijital ortamda yürütülmesine yönelik sistem.</p><div class="actions"><span class="status">Personel işlemleri</span><a class="open" href="https://itfaiye.github.io/Gunluk-yoklama" target="_blank" rel="noopener">Aç <span class="arrow">↗</span></a></div></div>
+      </article>
+      <article class="project" data-search="admin paneli yönetici admin giriş günlük yoklama">
+        <div class="cover"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=85" alt="Yönetim paneli ve veri ekranı"><span class="tag">YÖNETİM</span><span class="cover-mark">ADMİN PANELİ</span></div>
+        <div class="content"><h3>Günlük Yoklama – Admin Girişi</h3><p>Günlük yoklama sisteminin yönetim paneline erişim bağlantısı.</p><div class="actions"><span class="status">Yönetici erişimi</span><a class="open" href="https://itfaiye.github.io/Gunluk-yoklama/admin-panel.html" target="_blank" rel="noopener">Aç <span class="arrow">↗</span></a></div></div>
+      </article>
+      <article class="project" data-search="merdiven arıza tespit sistemi merdivenli araç arıza">
+        <div class="cover"><img src="https://images.unsplash.com/photo-1519583272095-6433daf26b6e?auto=format&fit=crop&w=1000&q=85" alt="Araç teknik kontrolü"><span class="tag">TEKNİK DESTEK</span><span class="cover-mark">ARIZA TESPİT</span></div>
+        <div class="content"><h3>Merdiven Arıza Tespit Sistemi</h3><p>Merdivenli itfaiye araçlarında arıza tespiti ve teknik değerlendirme süreçlerine destek olmak üzere hazırlanan sistem.</p><div class="actions"><span class="status">Teknik sistem</span><a class="open" href="https://itfaiye.github.io/Merdiven-ariza-tespit/" target="_blank" rel="noopener">Aç <span class="arrow">↗</span></a></div></div>
+      </article>
+      <article class="project" data-search="navigasyon harita rota yol tarifi itfaiye navigasyon sistemi">
+        <div class="cover"><img src="https://images.unsplash.com/photo-1524666041070-9fc6e6a5e5a2?auto=format&fit=crop&w=1000&q=85" alt="Harita ve navigasyon"><span class="tag">NAVİGASYON</span><span class="cover-mark">ROTA VE YÖNLENDİRME</span></div>
+        <div class="content"><h3>İtfaiye Navigasyon Sistemi</h3><p>İtfaiye ekiplerinin adres ve rota bilgilerine erişimini desteklemek amacıyla hazırlanan navigasyon projesi.</p><div class="actions"><span class="status">Dijital sistem</span><a class="open" href="https://itfaiye.github.io/navigasyon" target="_blank" rel="noopener">Aç <span class="arrow">↗</span></a></div></div>
+      </article>
+      <div class="empty" id="empty">Aramanızla eşleşen proje bulunamadı.</div>
+    </div>
+    <div class="note"><div class="note-icon">✦</div><div><strong>Fikirler, sahadaki ihtiyaca göre şekillenir.</strong><p>Bu sayfa, Ankara İtfaiyesi için geliştirilen ve geliştirilecek çalışmaları tek bir yerde tanıtmak amacıyla hazırlanmıştır. Yeni projeler aynı kart yapısıyla kolayca eklenebilir.</p></div></div>
+  </div>
+</main>
+<footer><strong>Abdullah Karaduman</strong> · Ankara İtfaiyesi için fikirler ve projeler<br>Bu sayfa kişisel proje portföyü amacıyla hazırlanmıştır.</footer>
+<script>
+const search=document.getElementById('search'), cards=[...document.querySelectorAll('.project')], empty=document.getElementById('empty');
+search.addEventListener('input',()=>{const q=search.value.toLocaleLowerCase('tr-TR').trim();let visible=0;cards.forEach(card=>{const show=(card.innerText+' '+card.dataset.search).toLocaleLowerCase('tr-TR').includes(q);card.style.display=show?'flex':'none';if(show)visible++});empty.style.display=visible?'none':'block'});
+</script>
+</body>
+</html>
